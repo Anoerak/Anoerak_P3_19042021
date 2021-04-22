@@ -148,12 +148,11 @@ header{
                     justify-content: space-around;
                     height: 1.5rem;
                     width: 1.5rem;
+                    left: -10px;
                     border-radius: 50%;
                     background-color: $primary-color;
                     color: white;
                     text-align: center;
-                    overflow: hidden;
-                    margin-right: 2rem;
                     padding-top: 4px;
                     font-weight: 300;
                     font-size: 0.9rem;
@@ -262,6 +261,7 @@ section{
                     opacity: 0;
                     &:checked + .iconify{
                         opacity: 1;
+                        animation: heart 0.5s;
                         & + .fa_custom{
                             opacity: 0;
                         }
@@ -269,6 +269,10 @@ section{
                 }
                 & .like .iconify{
                     color: $primary-color;
+                    display: block;
+                    transform: scaleY(0);
+                    transform-origin: 50% 100%;
+                    transition: transform 2s;
                     font-size: 1.25rem;
                     position: absolute;
                     margin-top: 0.95rem;
@@ -276,6 +280,8 @@ section{
                     z-index: 2;
                 }
                 & .like .fa_custom{
+                    background: -webkit-linear-gradient($primary-color, $secondary-color);  -webkit-text-fill-color: transparent; -webkit-background-clip: text;
+                    display: block;
                     opacity: 1;
                     position: relative;
                     margin-top: 0.85rem;
@@ -286,6 +292,14 @@ section{
                 }
             }
         }
+    }
+}
+@keyframes heart{
+    0%{
+        transform: scaleY(0);
+    }
+    100%{
+        transform: scaleY(1);
     }
 }
 footer{

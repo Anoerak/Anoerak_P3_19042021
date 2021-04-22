@@ -162,12 +162,11 @@ header .navbar .menu button .circle {
   justify-content: space-around;
   height: 1.5rem;
   width: 1.5rem;
+  left: -10px;
   border-radius: 50%;
   background-color: #9356DC;
   color: white;
   text-align: center;
-  overflow: hidden;
-  margin-right: 2rem;
   padding-top: 4px;
   font-weight: 300;
   font-size: 0.9rem;
@@ -278,12 +277,17 @@ section .restaurant .card .board input {
 }
 section .restaurant .card .board input:checked + .iconify {
   opacity: 1;
+  animation: heart 0.5s;
 }
 section .restaurant .card .board input:checked + .iconify + .fa_custom {
   opacity: 0;
 }
 section .restaurant .card .board .like .iconify {
   color: #9356DC;
+  display: block;
+  transform: scaleY(0);
+  transform-origin: 50% 100%;
+  transition: transform 2s;
   font-size: 1.25rem;
   position: absolute;
   margin-top: 0.95rem;
@@ -291,6 +295,10 @@ section .restaurant .card .board .like .iconify {
   z-index: 2;
 }
 section .restaurant .card .board .like .fa_custom {
+  background: -webkit-linear-gradient(#9356DC, #FF79DA);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  display: block;
   opacity: 1;
   position: relative;
   margin-top: 0.85rem;
@@ -300,6 +308,14 @@ section .restaurant .card .board .like .fa_custom {
   z-index: 2;
 }
 
+@keyframes heart {
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
 footer {
   bottom: 0;
   left: 0;
@@ -369,11 +385,13 @@ header .topimg img {
 }
 
 section {
+  align-items: center;
   border-radius: 2rem 2rem 0 0;
   background: #F6F6F6;
   padding-top: 2rem;
 }
 section .menus {
+  width: 100%;
   display: flex;
   flex-direction: column;
   border: solid red 2px;
@@ -401,9 +419,11 @@ section .menus .subtitles input {
 }
 section .menus .subtitles input:checked + .iconify {
   opacity: 1;
+  transition-duration: 250ms;
 }
 section .menus .subtitles input:checked + .iconify + .fa_custom {
   opacity: 0;
+  transition-duration: 250ms;
 }
 section .menus .subtitles .like .iconify {
   color: #9356DC;
@@ -498,6 +518,55 @@ section .menus .choices {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+section .checkout {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  border-radius: 2rem;
+  border: none;
+  height: 3rem;
+  width: 15rem;
+  color: white;
+  font-size: 1rem;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.15), 3px 3px 6px rgba(0, 0, 0, 0.05);
+  background: linear-gradient(to bottom right, #FF79DA 5%, #9356DC);
+}
+section .checkout:focus {
+  outline: none;
+}
+section .checkout:hover::after {
+  opacity: 1;
+}
+section .checkout::after {
+  content: "";
+  border-radius: 2rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to bottom right, #ff93e1, #a16be0);
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2), 3px 3px 6px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 250ms;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: auto;
+  font-family: "Roboto", sans-serif;
+}
+body h1, body h2, body h3, body h4, body h5, body h6 {
+  font-family: "Shrikhand", sans-serif;
 }
 
 * {

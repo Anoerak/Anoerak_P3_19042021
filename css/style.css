@@ -187,10 +187,13 @@ section {
 section .restaurant {
   background-color: #F6F6F6;
   padding-top: 3rem;
-  padding-block: 3rem;
+  padding-bottom: 3rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+}
+section .restaurant .sectiontitle {
   width: 100%;
 }
 section .restaurant h2 {
@@ -214,7 +217,7 @@ section .restaurant .card {
   align-items: center;
   justify-content: center;
   max-width: 28rem;
-  width: 100%;
+  width: 90%;
   margin-bottom: 1.5rem;
   border-radius: 10px 10px 10px 10px;
   box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2), 3px 3px 6px rgba(0, 0, 0, 0.1);

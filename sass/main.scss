@@ -112,16 +112,17 @@ header{
             margin-left: 1.5rem;
         }
         & .menu{
-            width: 100%;
             display: flex;
             flex-direction: column;
-            align-items: center;
+            align-items: flex-start;
+            margin-left: 2rem;
             justify-content: space-between;
             height: 20rem;
             padding-top: 2rem;
             & button{
                 background-color: $lightgrey;
                 width: 90%;
+                max-width: 30rem;
                 height: 5rem;
                 border-radius: 1.5rem;
                 border: none;
@@ -184,6 +185,122 @@ header{
         }
     }
 }
+section{
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+    width: 100%;
+    & .restaurant{
+        background-color: $lightgrey;
+        padding-top: 3rem;
+        padding-block: 3rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        & h2{
+            font-family: 'Roboto';
+            font-weight: 600;
+            display: inline-block;
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        & .cardlink{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            text-decoration: none;
+            color: black;
+        }
+        & .card{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            max-width: 28rem;
+            width: 100%;
+            margin-bottom: 1.5rem;
+            border-radius: 10px 10px 10px 10px;
+            box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.20),3px 3px 6px rgba(0, 0, 0, 0.10);
+            &:hover{
+                box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.20),3px 3px 12px rgba(0, 0, 0, 0.10);
+                transition: 500ms;
+            }
+            & img{
+                display: flex;
+                align-content: center;
+                object-fit: cover;
+                height: 12rem;
+                width: 100%;
+                border-radius: 10px 10px 0 0;
+            }
+            & .board{
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                justify-content: space-between;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                background: white;
+                width: 100%;
+                max-width: 28rem;
+                border-radius: 0 0 10px 10px;
+                & .cardlinktitle{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    width: 100%;
+                    text-decoration: none;
+                    color: black;
+                }
+                & h4{
+                    font-family: 'Roboto';
+                    font-size: 1.2rem;
+                    margin-bottom: 5px;
+                    margin-left: 10px;
+                }
+                & p{
+                    font-size: 1.2rem;
+                    font-weight: 300;
+                    margin-left: 10px;
+                    font-family: 'Roboto';
+                }
+                & input{
+                    position: absolute;
+                    width: 1.5rem;
+                    height: 1.5rem;
+                    margin-top: 0.7rem;
+                    z-index: 4;
+                    opacity: 0;
+                    &:checked + .iconify{
+                        opacity: 1;
+                        & + .fa_custom{
+                            opacity: 0;
+                        }
+                    }
+                }
+                & .like .iconify{
+                    color: $primary-color;
+                    font-size: 1.25rem;
+                    position: absolute;
+                    margin-top: 0.95rem;
+                    opacity: 0;
+                    z-index: 2;
+                }
+                & .like .fa_custom{
+                    opacity: 1;
+                    position: relative;
+                    margin-top: 0.85rem;
+                    margin-right: 1rem;
+                    font-size: 1.45rem;
+                    font-weight: normal;
+                    z-index: 2;
+                }
+            }
+        }
+    }
+}
 footer{
     bottom: 0;
     left: 0;
@@ -191,10 +308,8 @@ footer{
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    margin-top: auto;
     background-color: $footer-color;
     width: 100%;
-    margin-top: 2rem;
     margin-bottom: 0;
     padding-bottom: 2rem;
     padding-top: 1rem;

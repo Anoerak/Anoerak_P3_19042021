@@ -108,10 +108,10 @@ header .navbar h2 {
   margin-left: 1.5rem;
 }
 header .navbar .menu {
-  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  margin-left: 2rem;
   justify-content: space-between;
   height: 20rem;
   padding-top: 2rem;
@@ -119,6 +119,7 @@ header .navbar .menu {
 header .navbar .menu button {
   background-color: #F6F6F6;
   width: 90%;
+  max-width: 30rem;
   height: 5rem;
   border-radius: 1.5rem;
   border: none;
@@ -177,6 +178,123 @@ header .navbar .menu button i {
   color: #7E7E7E;
 }
 
+section {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
+  width: 100%;
+}
+section .restaurant {
+  background-color: #F6F6F6;
+  padding-top: 3rem;
+  padding-block: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+section .restaurant h2 {
+  font-family: "Roboto";
+  font-weight: 600;
+  display: inline-block;
+  margin-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+section .restaurant .cardlink {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  text-decoration: none;
+  color: black;
+}
+section .restaurant .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 28rem;
+  width: 100%;
+  margin-bottom: 1.5rem;
+  border-radius: 10px 10px 10px 10px;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2), 3px 3px 6px rgba(0, 0, 0, 0.1);
+}
+section .restaurant .card:hover {
+  box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.2), 3px 3px 12px rgba(0, 0, 0, 0.1);
+  transition: 500ms;
+}
+section .restaurant .card img {
+  display: flex;
+  align-content: center;
+  object-fit: cover;
+  height: 12rem;
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+section .restaurant .card .board {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: white;
+  width: 100%;
+  max-width: 28rem;
+  border-radius: 0 0 10px 10px;
+}
+section .restaurant .card .board .cardlinktitle {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  text-decoration: none;
+  color: black;
+}
+section .restaurant .card .board h4 {
+  font-family: "Roboto";
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  margin-left: 10px;
+}
+section .restaurant .card .board p {
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin-left: 10px;
+  font-family: "Roboto";
+}
+section .restaurant .card .board input {
+  position: absolute;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-top: 0.7rem;
+  z-index: 4;
+  opacity: 0;
+}
+section .restaurant .card .board input:checked + .iconify {
+  opacity: 1;
+}
+section .restaurant .card .board input:checked + .iconify + .fa_custom {
+  opacity: 0;
+}
+section .restaurant .card .board .like .iconify {
+  color: #9356DC;
+  font-size: 1.25rem;
+  position: absolute;
+  margin-top: 0.95rem;
+  opacity: 0;
+  z-index: 2;
+}
+section .restaurant .card .board .like .fa_custom {
+  opacity: 1;
+  position: relative;
+  margin-top: 0.85rem;
+  margin-right: 1rem;
+  font-size: 1.45rem;
+  font-weight: normal;
+  z-index: 2;
+}
+
 footer {
   bottom: 0;
   left: 0;
@@ -184,10 +302,8 @@ footer {
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  margin-top: auto;
   background-color: #363636;
   width: 100%;
-  margin-top: 2rem;
   margin-bottom: 0;
   padding-bottom: 2rem;
   padding-top: 1rem;

@@ -6,7 +6,7 @@
 
 body {
   margin: auto;
-  font: "Roboto", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 body h1, body h2, body h3, body h4, body h5, body h6 {
   font-family: "Shrikhand", sans-serif;
@@ -102,6 +102,7 @@ header .introduction .menu button::after {
 header .navbar {
   width: 100%;
   padding-top: 3rem;
+  margin-bottom: 3rem;
 }
 header .navbar h2 {
   font-family: "Roboto";
@@ -117,6 +118,7 @@ header .navbar .menu {
   padding-top: 2rem;
 }
 header .navbar .menu button {
+  cursor: pointer;
   background-color: #F6F6F6;
   width: 90%;
   max-width: 30rem;
@@ -181,7 +183,6 @@ header .navbar .menu button i {
 section {
   display: flex;
   flex-direction: column;
-  margin-top: 3rem;
   width: 100%;
 }
 section .restaurant {
@@ -267,9 +268,10 @@ section .restaurant .card .board p {
   font-family: "Roboto";
 }
 section .restaurant .card .board input {
+  cursor: pointer;
   position: absolute;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.8rem;
+  height: 1.8rem;
   margin-top: 0.7rem;
   z-index: 4;
   opacity: 0;
@@ -332,6 +334,184 @@ footer li a {
 footer li a i {
   width: 15px;
   margin-right: 8px;
+}
+
+header {
+  position: relative;
+  overflow: hidden;
+}
+header .hlogo2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+header .hlogo2 a {
+  text-decoration: none;
+  color: black;
+  left: 0;
+}
+header .hlogo2 a i {
+  font-size: 1.3rem;
+}
+header .hlogo2 img {
+  margin-bottom: 0px;
+  margin-right: 1.1rem;
+}
+header .topimg {
+  padding: 0;
+}
+header .topimg img {
+  object-fit: cover;
+  height: 20rem;
+  width: 100%;
+  padding: 0;
+}
+
+section {
+  border-radius: 2rem 2rem 0 0;
+  background: #F6F6F6;
+  padding-top: 2rem;
+}
+section .menus {
+  display: flex;
+  flex-direction: column;
+  border: solid red 2px;
+}
+section .menus .subtitles {
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+section .menus .subtitles h2 {
+  font-weight: 200;
+  margin-left: 1rem;
+}
+section .menus .subtitles input {
+  cursor: pointer;
+  position: absolute;
+  width: 1.8rem;
+  height: 1.8rem;
+  margin-right: 0.5rem;
+  z-index: 4;
+  opacity: 0;
+}
+section .menus .subtitles input:checked + .iconify {
+  opacity: 1;
+}
+section .menus .subtitles input:checked + .iconify + .fa_custom {
+  opacity: 0;
+}
+section .menus .subtitles .like .iconify {
+  color: #9356DC;
+  font-size: 1.25rem;
+  margin-top: 2px;
+  margin-right: 0.5rem;
+  position: absolute;
+  opacity: 0;
+  z-index: 2;
+}
+section .menus .subtitles .like .fa_custom {
+  opacity: 1;
+  position: relative;
+  margin-right: 1.5rem;
+  font-size: 1.45rem;
+  font-weight: normal;
+  z-index: 2;
+}
+section .menus .entrees h4 {
+  font-family: "Roboto";
+  font-weight: 400;
+  margin-left: 1.5rem;
+}
+section .menus .btn1 {
+  cursor: pointer;
+  background-color: white;
+  width: 90%;
+  max-width: 30rem;
+  height: 5rem;
+  border-radius: 1.5rem;
+  border: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.1rem;
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+  position: relative;
+  z-index: 1;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2), 3px 3px 6px rgba(0, 0, 0, 0.1);
+}
+section .menus .btn1:hover {
+  box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.2), 3px 3px 12px rgba(0, 0, 0, 0.1);
+  transition: 500ms;
+}
+section .menus .btn1 .label {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+}
+section .menus .btn1 .price {
+  margin-right: 1rem;
+  margin-top: 2rem;
+}
+section .menus .btn1 .h4, section .menus .btn1 .p {
+  font-family: "Roboto";
+  margin-left: 1.5rem;
+}
+section .menus .btn1 .h4 {
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+section .menus .btn1 .p {
+  font-weight: 300;
+}
+section .menus .btn1:focus {
+  outline: none;
+}
+section .menus .btn1:hover i {
+  color: #9356DC;
+}
+section .menus .btn1:hover::after {
+  opacity: 1;
+}
+section .menus .btn1::after {
+  content: "";
+  border-radius: 1.5rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #f2eafb;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2), 3px 3px 6px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 250ms;
+}
+section .menus .choices {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: auto;
+  font-family: "Roboto", sans-serif;
+}
+body h1, body h2, body h3, body h4, body h5, body h6 {
+  font-family: "Shrikhand", sans-serif;
 }
 
 /*# sourceMappingURL=style.css.map */

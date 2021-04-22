@@ -193,11 +193,14 @@ section{
     & .restaurant{
         background-color: $lightgrey;
         padding-top: 3rem;
-        padding-block: 3rem;
+        padding-bottom: 3rem;
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 100%;
+        & .sectiontitle{
+            width: 100%;
+        }
         & h2{
             font-family: 'Roboto';
             font-weight: 600;
@@ -219,7 +222,7 @@ section{
             align-items: center;
             justify-content: center;
             max-width: 28rem;
-            width: 100%;
+            width: 90%;
             margin-bottom: 1.5rem;
             border-radius: 10px 10px 10px 10px;
             box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.20),3px 3px 6px rgba(0, 0, 0, 0.10);

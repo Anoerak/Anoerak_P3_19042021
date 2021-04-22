@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font: 'Roboto', sans-serif;
+}
+$primary-color: #9356DC;
+$secondaray-color: #FF79DA;
+$third-color: #99E2D0;
+body{
+    max-width: 880px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    & h1, h2, h3, h4, h5, h6{
+        font-family: 'Shrikhand', sans-serif;
+    }  
+}

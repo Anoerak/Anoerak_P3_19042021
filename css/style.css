@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font: "Roboto", sans-serif;
+}
+
+body {
+  max-width: 880px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+body h1, body h2, body h3, body h4, body h5, body h6 {
+  font-family: "Shrikhand", sans-serif;
+}
+
+/*# sourceMappingURL=style.css.map */

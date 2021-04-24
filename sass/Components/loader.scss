@@ -1,1 +1,119 @@
-@import "../Base/base.scss";
+.circle1{
+    color: #9356DC;
+    font-size: 1rem;
+  }
+  .circle2{
+    color: #FF79DA;
+    font-size: 1rem;
+  }
+  .circle3{
+    color: #99E2D0;
+    font-size: 1rem;
+  }
+  .circle4{
+    color: #f58753;
+    font-size: 1rem;
+  }
+  body{
+        & header{
+            animation: itemAppear 3s;
+        }
+        & section{
+            animation: itemAppear 3.5s;
+        }
+        & footer{
+            animation: itemAppear 4s;
+        }
+        & .loader {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center; 
+            margin-left: 47%;    
+            margin-top: 48%;     
+            width: 80px;
+            height: 80px;
+            line-height: 4;
+            animation: loader 100ms;
+            animation-delay: 3s;  
+            animation-fill-mode: both;
+            z-index: 10;
+            & div {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                top: 33px;
+                width: 13px;
+                height: 13px;
+                border-radius: 50%;
+                background: #fff;
+                animation-timing-function: cubic-bezier(0, 1, 1, 0);
+            }
+            & div:nth-child(1) {
+                left: 10px;
+                animation: loader1 0.6s 5;
+            }
+            & div:nth-child(2) {
+                left: 10px;
+                animation: loader2 0.6s 5;
+            }
+            & div:nth-child(3) {
+                left: 40px;
+                animation: loader2 0.6s 5;
+            }
+            & div:nth-child(4) {
+                left: 70px;
+                animation: loader3 0.6s 5;
+            }
+        }
+}
+@keyframes itemAppear {
+    0% {
+      transform: scale(0);
+      opacity: 0;
+      z-index: -10;
+    }
+    90%{
+        opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+      z-index: 1;
+    }
+  }
+@keyframes loader {
+    0%{
+        opacity: 1;
+        z-index: 10;
+    }
+    100% {
+      opacity: 0;
+      z-index: -5;
+    }
+}    
+@keyframes loader1 {
+    0% {
+    transform: scale(0);
+    }
+    100% {
+    transform: scale(1);
+    }
+}
+@keyframes loader3 {
+    0% {
+    transform: scale(1);
+    }
+    100% {
+    transform: scale(0);
+    }
+    }
+@keyframes loader2 {
+    0% {
+    transform: translate(0, 0);
+    }
+    100% {
+    transform: translate(30px, 0);
+    }
+}

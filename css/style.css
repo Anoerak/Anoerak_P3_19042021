@@ -269,29 +269,29 @@ section .restaurant .card .board p {
 section .restaurant .card .board input {
   cursor: pointer;
   position: absolute;
-  width: 1.8rem;
-  height: 1.8rem;
+  width: 1.9rem;
+  height: 1.9rem;
   margin-top: 0.7rem;
   z-index: 4;
   opacity: 0;
 }
 section .restaurant .card .board input:checked + .iconify {
   opacity: 1;
-  animation: heart 0.5s;
-}
-section .restaurant .card .board input:checked + .iconify + .fa_custom {
-  opacity: 0;
+  animation: heart 0.75s forwards;
 }
 section .restaurant .card .board .like .iconify {
-  color: #9356DC;
+  background: -webkit-linear-gradient(#9356DC, #FF79DA);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
   display: block;
+  padding: 1px;
   transform: scaleY(0);
-  transform-origin: 50% 100%;
+  transform-origin: 50% 50%;
   transition: transform 2s;
-  font-size: 1.25rem;
+  font-size: 1.45rem;
   position: absolute;
-  margin-top: 0.95rem;
-  opacity: 0;
+  margin-top: 0.85rem;
+  opacity: 1;
   z-index: 2;
 }
 section .restaurant .card .board .like .fa_custom {
@@ -301,6 +301,7 @@ section .restaurant .card .board .like .fa_custom {
   display: block;
   opacity: 1;
   position: relative;
+  padding: 1px;
   margin-top: 0.85rem;
   margin-right: 1rem;
   font-size: 1.45rem;
@@ -314,6 +315,7 @@ section .restaurant .card .board .like .fa_custom {
   }
   100% {
     transform: scaleY(1);
+    opacity: 1;
   }
 }
 footer {
@@ -569,18 +571,127 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
   font-family: "Shrikhand", sans-serif;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.circle1 {
+  color: #9356DC;
+  font-size: 1rem;
 }
 
-body {
-  margin: auto;
-  font-family: "Roboto", sans-serif;
+.circle2 {
+  color: #FF79DA;
+  font-size: 1rem;
 }
-body h1, body h2, body h3, body h4, body h5, body h6 {
-  font-family: "Shrikhand", sans-serif;
+
+.circle3 {
+  color: #99E2D0;
+  font-size: 1rem;
+}
+
+.circle4 {
+  color: #f58753;
+  font-size: 1rem;
+}
+
+body header {
+  animation: itemAppear 3s;
+}
+body section {
+  animation: itemAppear 3.5s;
+}
+body footer {
+  animation: itemAppear 4s;
+}
+body .loader {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 47%;
+  margin-top: 48%;
+  width: 80px;
+  height: 80px;
+  line-height: 4;
+  animation: loader 100ms;
+  animation-delay: 3s;
+  animation-fill-mode: both;
+  z-index: 10;
+}
+body .loader div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 33px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #fff;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+body .loader div:nth-child(1) {
+  left: 10px;
+  animation: loader1 0.6s 5;
+}
+body .loader div:nth-child(2) {
+  left: 10px;
+  animation: loader2 0.6s 5;
+}
+body .loader div:nth-child(3) {
+  left: 40px;
+  animation: loader2 0.6s 5;
+}
+body .loader div:nth-child(4) {
+  left: 70px;
+  animation: loader3 0.6s 5;
+}
+
+@keyframes itemAppear {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+    z-index: -10;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+    z-index: 1;
+  }
+}
+@keyframes loader {
+  0% {
+    opacity: 1;
+    z-index: 10;
+  }
+  100% {
+    opacity: 0;
+    z-index: -5;
+  }
+}
+@keyframes loader1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes loader3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes loader2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(30px, 0);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -254,29 +254,29 @@ section{
                 & input{
                     cursor: pointer;
                     position: absolute;
-                    width: 1.8rem;
-                    height: 1.8rem;
+                    width: 1.9rem;
+                    height: 1.9rem;
                     margin-top: 0.7rem;
                     z-index: 4;
                     opacity: 0;
                     &:checked + .iconify{
                         opacity: 1;
-                        animation: heart 0.5s;
-                        & + .fa_custom{
-                            opacity: 0;
-                        }
+                        animation: heart 0.75s forwards;
                     }
                 }
                 & .like .iconify{
-                    color: $primary-color;
+                    background: -webkit-linear-gradient($primary-color, $secondary-color);
+                                -webkit-text-fill-color: transparent; 
+                                -webkit-background-clip: text;
                     display: block;
+                    padding: 1px;
                     transform: scaleY(0);
-                    transform-origin: 50% 100%;
+                    transform-origin: 50% 50%;
                     transition: transform 2s;
-                    font-size: 1.25rem;
+                    font-size: 1.45rem;
                     position: absolute;
-                    margin-top: 0.95rem;
-                    opacity: 0;
+                    margin-top: 0.85rem;
+                    opacity: 1;
                     z-index: 2;
                 }
                 & .like .fa_custom{
@@ -284,6 +284,7 @@ section{
                     display: block;
                     opacity: 1;
                     position: relative;
+                    padding: 1px;
                     margin-top: 0.85rem;
                     margin-right: 1rem;
                     font-size: 1.45rem;
@@ -300,6 +301,7 @@ section{
     }
     100%{
         transform: scaleY(1);
+        opacity: 1;
     }
 }
 footer{

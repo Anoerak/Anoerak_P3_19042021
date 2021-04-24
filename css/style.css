@@ -605,10 +605,8 @@ body .loader {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 47%;
-  margin-top: 48%;
-  width: 80px;
-  height: 80px;
+  width: 100%;
+  height: 100%;
   line-height: 4;
   animation: loader 100ms;
   animation-delay: 3s;
@@ -616,10 +614,10 @@ body .loader {
   z-index: 10;
 }
 body .loader div {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
   top: 33px;
   width: 13px;
   height: 13px;
@@ -629,19 +627,19 @@ body .loader div {
 }
 body .loader div:nth-child(1) {
   left: 10px;
-  animation: loader1 0.6s 5;
+  animation: loader1 0.65s 5;
 }
 body .loader div:nth-child(2) {
   left: 10px;
-  animation: loader2 0.6s 5;
+  animation: loader2 0.65s 5;
 }
 body .loader div:nth-child(3) {
   left: 40px;
-  animation: loader2 0.6s 5;
+  animation: loader2 0.65s 5;
 }
 body .loader div:nth-child(4) {
   left: 70px;
-  animation: loader3 0.6s 5;
+  animation: loader3 0.65s 5;
 }
 
 @keyframes itemAppear {
@@ -690,7 +688,12 @@ body .loader div:nth-child(4) {
     transform: translate(0, 0);
   }
   100% {
-    transform: translate(30px, 0);
+    transform: translate(40px, 0);
+  }
+}
+@media screen and (max-width: 660px) {
+  body .loader {
+    padding-right: 20%;
   }
 }
 

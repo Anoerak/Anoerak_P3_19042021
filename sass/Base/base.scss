@@ -13,6 +13,8 @@ $yellow: #f58753;
     box-sizing: border-box;
 }
 body{
+    max-width: 1200px;
+    width: 100%;
     margin: auto;
     font-family: 'Roboto', sans-serif;
     & h1, h2, h3, h4, h5, h6{

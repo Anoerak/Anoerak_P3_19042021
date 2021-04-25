@@ -5,6 +5,8 @@
 }
 
 body {
+  max-width: 1200px;
+  width: 100%;
   margin: auto;
   font-family: "Roboto", sans-serif;
 }
@@ -564,6 +566,8 @@ section .checkout::after {
 }
 
 body {
+  max-width: 1200px;
+  width: 100%;
   margin: auto;
   font-family: "Roboto", sans-serif;
 }
@@ -694,6 +698,36 @@ body .loader div:nth-child(4) {
 @media screen and (max-width: 660px) {
   body .loader {
     padding-right: 20%;
+  }
+}
+@media screen and (max-width: 660px) {
+  body .loader {
+    padding-right: 20%;
+  }
+
+  header .menu {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 660px) and (max-width: 1400px) {
+  header .navbar button {
+    margin: 1rem;
+    min-width: 10rem;
+  }
+
+  section .restaurant {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  section .restaurant .card {
+    min-width: 35%;
+    margin: 1.5rem;
+  }
+  section .restaurant .board {
+    width: 100%;
   }
 }
 

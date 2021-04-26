@@ -14,11 +14,10 @@ $yellow: #f58753;
 }
 body{
     max-width: 1200px;
-    min-width: 28rem;
     width: 100%;
     margin: auto;
     font-family: 'Roboto', sans-serif;
-    & h1, h2, h3, h4, h5, h6{
+    & h1, h2{
         font-family: 'Shrikhand', sans-serif;
     }
     & footer{
@@ -56,4 +55,28 @@ body{
             margin-right: 8px;
         }
     }
+}
+
+@mixin button($type) {
+    border: 0;
+    padding: 0.75rem 1.5rem;
+    font-weight: 500;
+    font-size: 1.1rem;
+    border-radius: 100px;
+    color: white;
+    background-color: rgb(104, 104, 104);
+    background-image: linear-gradient(to bottom right, lighten($secondary-color, 5), lighten($primary-color, 5));
+    cursor: pointer;
+    transition-duration: 0.25s;
+    box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+
+  &:hover {
+    background-color: white;
+    box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.50);
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
 }

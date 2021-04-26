@@ -96,7 +96,7 @@
                 font-family: 'Roboto';
                 margin-left: 1.5rem;
             }
-            & .menu{
+            & .menu1{
                 display: flex;
                 flex-direction: column;
                 align-items: flex-start;
@@ -109,7 +109,7 @@
                     background-color: $lightgrey;
                     width: 90%;
                     max-width: 30rem;
-                    min-width: 25rem;
+                    min-width: 20rem;
                     height: 5rem;
                     border-radius: 1.5rem;
                     border: none;
@@ -266,9 +266,11 @@
                         z-index: 4;
                         opacity: 0;
                         &:checked + .iconify{
-                            opacity: 1;
-                            animation: heart 0.75s forwards;
+                            animation: heart 0.95s forwards;
                         }
+                        /*&:not(:checked) + .iconify{
+                            animation: heart 0.75s reverse;
+                        }*/
                     }
                     & .like .iconify{
                         background: -webkit-linear-gradient($primary-color, $secondary-color);
@@ -283,14 +285,12 @@
                         font-size: 1.45rem;
                         position: absolute;
                         margin-top: 0.85rem;
-                        opacity: 1;
                         z-index: 2;
                     }
                     & .like .fa_custom{
                         background: -webkit-linear-gradient($primary-color, $secondary-color);  -webkit-text-fill-color: transparent; -webkit-background-clip: text;
                         display: block;
                         outline: none;
-                        opacity: 1;
                         position: relative;
                         padding: 1px;
                         margin-top: 0.85rem;
@@ -307,6 +307,7 @@
 @keyframes heart{
     0%{
         transform: scaleY(0);
+        opacity: 0;
     }
     100%{
         transform: scaleY(1);

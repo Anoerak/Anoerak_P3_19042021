@@ -14,7 +14,7 @@
     color: #f58753;
     font-size: 1rem;
   }
-  body{
+  #index{
         & header{
             animation: itemAppear 3s;
         }
@@ -25,6 +25,7 @@
             animation: itemAppear 4s;
         }
         & .loader {
+            left: 0em;
             position: absolute;
             display: flex;
             align-items: center;
@@ -99,14 +100,6 @@
     transform: scale(1);
     }
 }
-@keyframes loader3 {
-    0% {
-    transform: scale(1);
-    }
-    100% {
-    transform: scale(0);
-    }
-    }
 @keyframes loader2 {
     0% {
     transform: translate(0, 0);
@@ -115,10 +108,11 @@
     transform: translate(40px, 0);
     }
 }
-@media screen and (max-width: 660px){
-    body{
-        & .loader {
-            padding-right: 20%;
-        }
+@keyframes loader3 {
+    0% {
+    transform: scale(1);
+    }
+    100% {
+    transform: scale(0);
     }
 }

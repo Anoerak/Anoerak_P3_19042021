@@ -5,28 +5,66 @@
 }
 
 body {
+  max-width: 1200px;
+  min-width: 28rem;
+  width: 100%;
   margin: auto;
   font-family: "Roboto", sans-serif;
 }
 body h1, body h2, body h3, body h4, body h5, body h6 {
   font-family: "Shrikhand", sans-serif;
 }
+body footer {
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  background-color: #363636;
+  width: 100%;
+  margin-bottom: 0;
+  padding-bottom: 2rem;
+  padding-top: 1rem;
+}
+body footer .footerlogo {
+  filter: invert(100%);
+  width: 8rem;
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+body footer ul {
+  list-style: none;
+  line-height: 1.5rem;
+  margin-left: 1.5rem;
+}
+body footer li a {
+  font-family: "Roboto";
+  text-decoration: none;
+  color: white;
+  font-size: 0.9rem;
+}
+body footer li a i {
+  width: 15px;
+  margin-right: 8px;
+}
 
-header {
+#index header {
   display: flex;
   flex-direction: column;
 }
-header .hlogo {
+#index header .hlogo {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-header img {
+#index header img {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
-header .location {
+#index header .location {
   background-color: #EAEAEA;
   height: 3.5rem;
   display: flex;
@@ -34,11 +72,11 @@ header .location {
   justify-content: center;
   font-size: 1.1rem;
 }
-header .location i {
+#index header .location i {
   cursor: pointer;
   margin-right: 1rem;
 }
-header .introduction {
+#index header .introduction {
   display: flex;
   justify-content: center;
   background-color: #F6F6F6;
@@ -47,7 +85,7 @@ header .introduction {
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
-header .introduction .menu {
+#index header .introduction .menu {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -55,20 +93,21 @@ header .introduction .menu {
   width: 80%;
   justify-content: space-around;
 }
-header .introduction .menu h2 {
+#index header .introduction .menu h2 {
   font-family: "Roboto";
   text-align: center;
 }
-header .introduction .menu p {
+#index header .introduction .menu p {
   font-family: "Roboto";
   text-align: center;
   font-weight: 100;
   font-size: 1.1rem;
   margin-bottom: 2rem;
 }
-header .introduction .menu button {
+#index header .introduction .menu button {
   cursor: pointer;
   position: relative;
+  outline: none;
   z-index: 1;
   border-radius: 2rem;
   border: none;
@@ -79,13 +118,13 @@ header .introduction .menu button {
   box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.15), 3px 3px 6px rgba(0, 0, 0, 0.05);
   background: linear-gradient(to bottom right, #FF79DA 5%, #9356DC);
 }
-header .introduction .menu button:focus {
+#index header .introduction .menu button:focus {
   outline: none;
 }
-header .introduction .menu button:hover::after {
+#index header .introduction .menu button:hover::after {
   opacity: 1;
 }
-header .introduction .menu button::after {
+#index header .introduction .menu button::after {
   content: "";
   border-radius: 2rem;
   position: absolute;
@@ -99,16 +138,16 @@ header .introduction .menu button::after {
   z-index: -1;
   transition: opacity 250ms;
 }
-header .navbar {
+#index header .navbar {
   width: 100%;
   padding-top: 3rem;
   margin-bottom: 3rem;
 }
-header .navbar h2 {
+#index header .navbar h2 {
   font-family: "Roboto";
   margin-left: 1.5rem;
 }
-header .navbar .menu {
+#index header .navbar .menu {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -117,11 +156,12 @@ header .navbar .menu {
   height: 20rem;
   padding-top: 2rem;
 }
-header .navbar .menu button {
+#index header .navbar .menu button {
   cursor: pointer;
   background-color: #F6F6F6;
   width: 90%;
   max-width: 30rem;
+  min-width: 25rem;
   height: 5rem;
   border-radius: 1.5rem;
   border: none;
@@ -134,16 +174,16 @@ header .navbar .menu button {
   position: relative;
   z-index: 1;
 }
-header .navbar .menu button:focus {
+#index header .navbar .menu button:focus {
   outline: none;
 }
-header .navbar .menu button:hover i {
+#index header .navbar .menu button:hover i {
   color: #9356DC;
 }
-header .navbar .menu button:hover::after {
+#index header .navbar .menu button:hover::after {
   opacity: 1;
 }
-header .navbar .menu button::after {
+#index header .navbar .menu button::after {
   content: "";
   border-radius: 1.5rem;
   position: absolute;
@@ -157,7 +197,7 @@ header .navbar .menu button::after {
   z-index: -1;
   transition: opacity 250ms;
 }
-header .navbar .menu button .circle {
+#index header .navbar .menu button .circle {
   position: absolute;
   justify-content: space-around;
   height: 1.5rem;
@@ -172,19 +212,19 @@ header .navbar .menu button .circle {
   font-size: 0.9rem;
   font-family: "Roboto";
 }
-header .navbar .menu button i {
+#index header .navbar .menu button i {
   margin-right: 2rem;
   margin-left: 3rem;
   font-size: 1.3rem;
   color: #7E7E7E;
 }
 
-section {
+#index section {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
-section .restaurant {
+#index section .restaurant {
   background-color: #F6F6F6;
   padding-top: 3rem;
   padding-bottom: 3rem;
@@ -193,17 +233,17 @@ section .restaurant {
   align-items: center;
   width: 100%;
 }
-section .restaurant .sectiontitle {
+#index section .restaurant .sectiontitle {
   width: 100%;
 }
-section .restaurant h2 {
+#index section .restaurant h2 {
   font-family: "Roboto";
   font-weight: 600;
   display: inline-block;
   margin-left: 1.5rem;
   margin-bottom: 1.5rem;
 }
-section .restaurant .cardlink {
+#index section .restaurant .cardlink {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -211,7 +251,7 @@ section .restaurant .cardlink {
   text-decoration: none;
   color: black;
 }
-section .restaurant .card {
+#index section .restaurant .card {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -222,11 +262,11 @@ section .restaurant .card {
   border-radius: 10px 10px 10px 10px;
   box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2), 3px 3px 6px rgba(0, 0, 0, 0.1);
 }
-section .restaurant .card:hover {
+#index section .restaurant .card:hover {
   box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.2), 3px 3px 12px rgba(0, 0, 0, 0.1);
   transition: 500ms;
 }
-section .restaurant .card img {
+#index section .restaurant .card img {
   display: flex;
   align-content: center;
   object-fit: cover;
@@ -234,7 +274,7 @@ section .restaurant .card img {
   width: 100%;
   border-radius: 10px 10px 0 0;
 }
-section .restaurant .card .board {
+#index section .restaurant .card .board {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -246,7 +286,7 @@ section .restaurant .card .board {
   max-width: 28rem;
   border-radius: 0 0 10px 10px;
 }
-section .restaurant .card .board .cardlinktitle {
+#index section .restaurant .card .board .cardlinktitle {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -254,36 +294,38 @@ section .restaurant .card .board .cardlinktitle {
   text-decoration: none;
   color: black;
 }
-section .restaurant .card .board h4 {
+#index section .restaurant .card .board h4 {
   font-family: "Roboto";
   font-size: 1.2rem;
   margin-bottom: 5px;
   margin-left: 10px;
 }
-section .restaurant .card .board p {
+#index section .restaurant .card .board p {
   font-size: 1.2rem;
   font-weight: 300;
   margin-left: 10px;
   font-family: "Roboto";
 }
-section .restaurant .card .board input {
+#index section .restaurant .card .board input {
   cursor: pointer;
   position: absolute;
+  outline: none;
   width: 1.9rem;
   height: 1.9rem;
   margin-top: 0.7rem;
   z-index: 4;
   opacity: 0;
 }
-section .restaurant .card .board input:checked + .iconify {
+#index section .restaurant .card .board input:checked + .iconify {
   opacity: 1;
   animation: heart 0.75s forwards;
 }
-section .restaurant .card .board .like .iconify {
+#index section .restaurant .card .board .like .iconify {
   background: -webkit-linear-gradient(#9356DC, #FF79DA);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   display: block;
+  outline: none;
   padding: 1px;
   transform: scaleY(0);
   transform-origin: 50% 50%;
@@ -294,11 +336,12 @@ section .restaurant .card .board .like .iconify {
   opacity: 1;
   z-index: 2;
 }
-section .restaurant .card .board .like .fa_custom {
+#index section .restaurant .card .board .like .fa_custom {
   background: -webkit-linear-gradient(#9356DC, #FF79DA);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   display: block;
+  outline: none;
   opacity: 1;
   position: relative;
   padding: 1px;
@@ -318,87 +361,54 @@ section .restaurant .card .board .like .fa_custom {
     opacity: 1;
   }
 }
-footer {
-  bottom: 0;
-  left: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  background-color: #363636;
-  width: 100%;
-  margin-bottom: 0;
-  padding-bottom: 2rem;
-  padding-top: 1rem;
-}
-footer .footerlogo {
-  filter: invert(100%);
-  width: 8rem;
-  margin-left: 1.5rem;
-  margin-bottom: 1rem;
-  margin-top: 1rem;
-}
-footer ul {
-  list-style: none;
-  line-height: 1.5rem;
-  margin-left: 1.5rem;
-}
-footer li a {
-  font-family: "Roboto";
-  text-decoration: none;
-  color: white;
-  font-size: 0.9rem;
-}
-footer li a i {
-  width: 15px;
-  margin-right: 8px;
-}
-
-header {
+#restaurant header {
   position: relative;
   overflow: hidden;
 }
-header .hlogo2 {
+#restaurant header .hlogo2 {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
 }
-header .hlogo2 a {
+#restaurant header .hlogo2 a {
   text-decoration: none;
   color: black;
   left: 0;
 }
-header .hlogo2 a i {
+#restaurant header .hlogo2 a i {
   font-size: 1.3rem;
 }
-header .hlogo2 img {
+#restaurant header .hlogo2 img {
   margin-bottom: 0px;
   margin-right: 1.1rem;
 }
-header .topimg {
+#restaurant .topimg {
   padding: 0;
 }
-header .topimg img {
+#restaurant .topimg img {
   object-fit: cover;
   height: 20rem;
   width: 100%;
   padding: 0;
 }
 
-section {
+#restaurant section {
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  width: 100%;
   border-radius: 2rem 2rem 0 0;
   background: #F6F6F6;
   padding-top: 2rem;
 }
-section .menus {
+#restaurant section .menus {
   width: 100%;
   display: flex;
   flex-direction: column;
   border: solid red 2px;
 }
-section .menus .subtitles {
+#restaurant section .menus .subtitles {
   margin-bottom: 2rem;
   font-size: 1.2rem;
   display: flex;
@@ -406,11 +416,11 @@ section .menus .subtitles {
   align-items: center;
   justify-content: space-between;
 }
-section .menus .subtitles h2 {
+#restaurant section .menus .subtitles h2 {
   font-weight: 200;
   margin-left: 1rem;
 }
-section .menus .subtitles input {
+#restaurant section .menus .subtitles input {
   cursor: pointer;
   position: absolute;
   width: 1.8rem;
@@ -419,15 +429,15 @@ section .menus .subtitles input {
   z-index: 4;
   opacity: 0;
 }
-section .menus .subtitles input:checked + .iconify {
+#restaurant section .menus .subtitles input:checked + .iconify {
   opacity: 1;
   transition-duration: 250ms;
 }
-section .menus .subtitles input:checked + .iconify + .fa_custom {
+#restaurant section .menus .subtitles input:checked + .iconify + .fa_custom {
   opacity: 0;
   transition-duration: 250ms;
 }
-section .menus .subtitles .like .iconify {
+#restaurant section .menus .subtitles .like .iconify {
   color: #9356DC;
   font-size: 1.25rem;
   margin-top: 2px;
@@ -436,7 +446,7 @@ section .menus .subtitles .like .iconify {
   opacity: 0;
   z-index: 2;
 }
-section .menus .subtitles .like .fa_custom {
+#restaurant section .menus .subtitles .like .fa_custom {
   opacity: 1;
   position: relative;
   margin-right: 1.5rem;
@@ -444,12 +454,12 @@ section .menus .subtitles .like .fa_custom {
   font-weight: normal;
   z-index: 2;
 }
-section .menus .entrees h4 {
+#restaurant section .menus .entrees h4 {
   font-family: "Roboto";
   font-weight: 400;
   margin-left: 1.5rem;
 }
-section .menus .btn1 {
+#restaurant section .menus .btn1 {
   cursor: pointer;
   background-color: white;
   width: 90%;
@@ -468,41 +478,41 @@ section .menus .btn1 {
   z-index: 1;
   box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2), 3px 3px 6px rgba(0, 0, 0, 0.1);
 }
-section .menus .btn1:hover {
+#restaurant section .menus .btn1:hover {
   box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.2), 3px 3px 12px rgba(0, 0, 0, 0.1);
   transition: 500ms;
 }
-section .menus .btn1 .label {
+#restaurant section .menus .btn1 .label {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   height: 100%;
 }
-section .menus .btn1 .price {
+#restaurant section .menus .btn1 .price {
   margin-right: 1rem;
   margin-top: 2rem;
 }
-section .menus .btn1 .h4, section .menus .btn1 .p {
+#restaurant section .menus .btn1 .h4, #restaurant section .menus .btn1 .p {
   font-family: "Roboto";
   margin-left: 1.5rem;
 }
-section .menus .btn1 .h4 {
+#restaurant section .menus .btn1 .h4 {
   font-weight: 500;
   font-size: 1.2rem;
 }
-section .menus .btn1 .p {
+#restaurant section .menus .btn1 .p {
   font-weight: 300;
 }
-section .menus .btn1:focus {
+#restaurant section .menus .btn1:focus {
   outline: none;
 }
-section .menus .btn1:hover i {
+#restaurant section .menus .btn1:hover i {
   color: #9356DC;
 }
-section .menus .btn1:hover::after {
+#restaurant section .menus .btn1:hover::after {
   opacity: 1;
 }
-section .menus .btn1::after {
+#restaurant section .menus .btn1::after {
   content: "";
   border-radius: 1.5rem;
   position: absolute;
@@ -516,12 +526,12 @@ section .menus .btn1::after {
   z-index: -1;
   transition: opacity 250ms;
 }
-section .menus .choices {
+#restaurant section .menus .choices {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-section .checkout {
+#restaurant section .checkout {
   margin-top: 2rem;
   margin-bottom: 2rem;
   cursor: pointer;
@@ -536,13 +546,13 @@ section .checkout {
   box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.15), 3px 3px 6px rgba(0, 0, 0, 0.05);
   background: linear-gradient(to bottom right, #FF79DA 5%, #9356DC);
 }
-section .checkout:focus {
+#restaurant section .checkout:focus {
   outline: none;
 }
-section .checkout:hover::after {
+#restaurant section .checkout:hover::after {
   opacity: 1;
 }
-section .checkout::after {
+#restaurant section .checkout::after {
   content: "";
   border-radius: 2rem;
   position: absolute;
@@ -564,11 +574,49 @@ section .checkout::after {
 }
 
 body {
+  max-width: 1200px;
+  min-width: 28rem;
+  width: 100%;
   margin: auto;
   font-family: "Roboto", sans-serif;
 }
 body h1, body h2, body h3, body h4, body h5, body h6 {
   font-family: "Shrikhand", sans-serif;
+}
+body footer {
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  background-color: #363636;
+  width: 100%;
+  margin-bottom: 0;
+  padding-bottom: 2rem;
+  padding-top: 1rem;
+}
+body footer .footerlogo {
+  filter: invert(100%);
+  width: 8rem;
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+body footer ul {
+  list-style: none;
+  line-height: 1.5rem;
+  margin-left: 1.5rem;
+}
+body footer li a {
+  font-family: "Roboto";
+  text-decoration: none;
+  color: white;
+  font-size: 0.9rem;
+}
+body footer li a i {
+  width: 15px;
+  margin-right: 8px;
 }
 
 .circle1 {
@@ -591,16 +639,17 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
   font-size: 1rem;
 }
 
-body header {
+#index header {
   animation: itemAppear 3s;
 }
-body section {
+#index section {
   animation: itemAppear 3.5s;
 }
-body footer {
+#index footer {
   animation: itemAppear 4s;
 }
-body .loader {
+#index .loader {
+  left: 0em;
   position: absolute;
   display: flex;
   align-items: center;
@@ -613,7 +662,7 @@ body .loader {
   animation-fill-mode: both;
   z-index: 10;
 }
-body .loader div {
+#index .loader div {
   position: relative;
   display: flex;
   align-items: center;
@@ -625,19 +674,19 @@ body .loader div {
   background: #fff;
   animation-timing-function: cubic-bezier(0, 1, 1, 0);
 }
-body .loader div:nth-child(1) {
+#index .loader div:nth-child(1) {
   left: 10px;
   animation: loader1 0.65s 5;
 }
-body .loader div:nth-child(2) {
+#index .loader div:nth-child(2) {
   left: 10px;
   animation: loader2 0.65s 5;
 }
-body .loader div:nth-child(3) {
+#index .loader div:nth-child(3) {
   left: 40px;
   animation: loader2 0.65s 5;
 }
-body .loader div:nth-child(4) {
+#index .loader div:nth-child(4) {
   left: 70px;
   animation: loader3 0.65s 5;
 }
@@ -675,14 +724,6 @@ body .loader div:nth-child(4) {
     transform: scale(1);
   }
 }
-@keyframes loader3 {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(0);
-  }
-}
 @keyframes loader2 {
   0% {
     transform: translate(0, 0);
@@ -691,9 +732,53 @@ body .loader div:nth-child(4) {
     transform: translate(40px, 0);
   }
 }
+@keyframes loader3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
 @media screen and (max-width: 660px) {
-  body .loader {
-    padding-right: 20%;
+  body header .menu {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 661px) and (max-width: 991px) {
+  body header .menu {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 992px) {
+  #index header .navbar .menu {
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: auto;
+  }
+  #index header .navbar .menu .btn3 {
+    margin-left: 27.5%;
+  }
+  #index header .navbar .menu button {
+    margin: 1.5rem;
+    min-width: 25rem;
+    width: 45%;
+  }
+  #index section .restaurant {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  #index section .restaurant .card {
+    min-width: 30%;
+    margin: 1.5rem;
+  }
+  #index section .restaurant .board {
+    width: 100%;
   }
 }
 

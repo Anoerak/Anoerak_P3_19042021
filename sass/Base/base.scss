@@ -14,10 +14,46 @@ $yellow: #f58753;
 }
 body{
     max-width: 1200px;
+    min-width: 28rem;
     width: 100%;
     margin: auto;
     font-family: 'Roboto', sans-serif;
     & h1, h2, h3, h4, h5, h6{
         font-family: 'Shrikhand', sans-serif;
-    }  
+    }
+    & footer{
+        bottom: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        background-color: $footer-color;
+        width: 100%;
+        margin-bottom: 0;
+        padding-bottom: 2rem;
+        padding-top: 1rem;
+        & .footerlogo{
+            filter: invert(100%);
+            width: 8rem;
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+            margin-top: 1rem;
+        }
+        & ul{
+        list-style: none;
+        line-height: 1.5rem;
+        margin-left: 1.5rem;
+        }
+        & li a{
+            font-family: 'Roboto';
+            text-decoration: none;
+            color: white;
+            font-size: 0.9rem;
+        }
+        & li a i{
+            width: 15px;
+            margin-right: 8px;
+        }
+    }
 }

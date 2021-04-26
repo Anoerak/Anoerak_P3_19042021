@@ -1,22 +1,24 @@
-header{
-    position: relative;
-    overflow: hidden;
-    & .hlogo2{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-evenly;
-        & a{
-            text-decoration: none;
-            color: black;
-            left: 0;
-            & i{
-                font-size: 1.3rem;
+#restaurant{
+    & header{
+        position: relative;
+        overflow: hidden;
+        & .hlogo2{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-evenly;
+            & a{
+                text-decoration: none;
+                color: black;
+                left: 0;
+                & i{
+                    font-size: 1.3rem;
+                }
             }
-        }
-        & img{
-            margin-bottom: 0px;
-            margin-right: 1.1rem;
+            & img{
+                margin-bottom: 0px;
+                margin-right: 1.1rem;
+            }
         }
     }
     & .topimg{
@@ -29,179 +31,184 @@ header{
         }
     }
 }
-section{
-    align-items: center;
-    border-radius: 2rem 2rem 0 0;
-    background: $lightgrey;
-    padding-top: 2rem;
-    & .menus{
-        width: 100%;
+#restaurant{
+    & section{
         display: flex;
         flex-direction: column;
-        border: solid red 2px;
-        & .subtitles{
-            margin-bottom: 2rem;
-            font-size: 1.2rem;
+        align-items: center;
+        width: 100%;
+        border-radius: 2rem 2rem 0 0;
+        background: $lightgrey;
+        padding-top: 2rem;
+        & .menus{
+            width: 100%;
             display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-between;
-            & h2{
-                font-weight: 200;
-                margin-left: 1rem;
-            }
-            & input{
-                cursor: pointer;
-                position: absolute;
-                width: 1.8rem;
-                height: 1.8rem;
-                margin-right: 0.5rem;
-                z-index: 4;
-                opacity: 0;
-                &:checked + .iconify{
-                    opacity: 1;
-                    transition-duration: 250ms;
-                    & + .fa_custom{
-                        opacity: 0;
+            flex-direction: column;
+            border: solid red 2px;
+            & .subtitles{
+                margin-bottom: 2rem;
+                font-size: 1.2rem;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                & h2{
+                    font-weight: 200;
+                    margin-left: 1rem;
+                }
+                & input{
+                    cursor: pointer;
+                    position: absolute;
+                    width: 1.8rem;
+                    height: 1.8rem;
+                    margin-right: 0.5rem;
+                    z-index: 4;
+                    opacity: 0;
+                    &:checked + .iconify{
+                        opacity: 1;
                         transition-duration: 250ms;
+                        & + .fa_custom{
+                            opacity: 0;
+                            transition-duration: 250ms;
+                        }
                     }
                 }
+                & .like .iconify{
+                    color: $primary-color;
+                    font-size: 1.25rem;
+                    margin-top: 2px;
+                    margin-right: 0.5rem;
+                    position: absolute;
+                    opacity: 0;
+                    z-index: 2;
+                }
+                & .like .fa_custom{
+                    opacity: 1;
+                    position: relative;
+                    margin-right: 1.5rem;
+                    font-size: 1.45rem;
+                    font-weight: normal;
+                    z-index: 2;
+                }
             }
-            & .like .iconify{
-                color: $primary-color;
-                font-size: 1.25rem;
-                margin-top: 2px;
-                margin-right: 0.5rem;
-                position: absolute;
-                opacity: 0;
-                z-index: 2;
+            & .entrees{
+                & h4{
+                    font-family: 'Roboto';
+                    font-weight: 400;
+                    margin-left: 1.5rem;
+                }
             }
-            & .like .fa_custom{
-                opacity: 1;
+            & .btn1{
+                cursor: pointer;
+                background-color: white;
+                width: 90%;
+                max-width: 30rem;
+                height: 5rem;
+                border-radius: 1.5rem;
+                border: none;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                font-size: 1.1rem;
+                margin-top: 0.75rem;
+                margin-bottom: 0.75rem;
                 position: relative;
-                margin-right: 1.5rem;
-                font-size: 1.45rem;
-                font-weight: normal;
-                z-index: 2;
-            }
+                z-index: 1;
+                box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.20),3px 3px 6px rgba(0, 0, 0, 0.10);
+                &:hover{
+                    box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.20),3px 3px 12px rgba(0, 0, 0, 0.10);
+                    transition: 500ms;
+                }
+                & .label{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    height: 100%;
+                }
+                & .price{
+                    margin-right: 1rem;
+                    margin-top: 2rem;
+                }
+                & .h4, .p{
+                    font-family: 'Roboto';
+                    margin-left: 1.5rem;
+                }
+                & .h4{
+                    font-weight: 500;
+                    font-size: 1.2rem;
+                }
+                & .p{
+                    font-weight: 300;
+                }
+                &:focus{
+                    outline: none;
+                }
+                &:hover{
+                    & i{
+                        color: $primary-color;
+                    }
+                    &::after{
+                        opacity: 1;
+                    }
+                }
+                &::after{
+                    content: '';
+                    border-radius: 1.5rem;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    background: lighten($primary-color, 35);
+                    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.20),3px 3px 6px rgba(0, 0, 0, 0.10);;
+                    opacity: 0;
+                    z-index: -1;
+                    transition: opacity 250ms;
+                }
         }
-        & .entrees{
-            & h4{
-                font-family: 'Roboto';
-                font-weight: 400;
-                margin-left: 1.5rem;
-            }
-        }
-        & .btn1{
-            cursor: pointer;
-            background-color: white;
-            width: 90%;
-            max-width: 30rem;
-            height: 5rem;
-            border-radius: 1.5rem;
-            border: none;
+        & .choices{
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             align-items: center;
-            justify-content: space-between;
-            font-size: 1.1rem;
-            margin-top: 0.75rem;
-            margin-bottom: 0.75rem;
+        }
+        }
+        & .checkout{
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            cursor: pointer;
             position: relative;
             z-index: 1;
-            box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.20),3px 3px 6px rgba(0, 0, 0, 0.10);
-            &:hover{
-                box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.20),3px 3px 12px rgba(0, 0, 0, 0.10);
-                transition: 500ms;
-            }
-            & .label{
-                display: flex;
-                flex-direction: column;
-                justify-content: space-evenly;
-                height: 100%;
-            }
-            & .price{
-                margin-right: 1rem;
-                margin-top: 2rem;
-            }
-            & .h4, .p{
-                font-family: 'Roboto';
-                margin-left: 1.5rem;
-            }
-            & .h4{
-                font-weight: 500;
-                font-size: 1.2rem;
-            }
-            & .p{
-                font-weight: 300;
-            }
+            border-radius: 2rem;
+            border: none;
+            height: 3rem;
+            width: 15rem;
+            color: white;
+            font-size: 1rem;
+            box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.15),3px 3px 6px rgba(0, 0, 0, 0.05);;
+            background: linear-gradient(to bottom right, $secondary-color 5%, $primary-color );
             &:focus{
                 outline: none;
             }
             &:hover{
-                & i{
-                    color: $primary-color;
-                }
                 &::after{
                     opacity: 1;
                 }
             }
             &::after{
                 content: '';
-                border-radius: 1.5rem;
+                border-radius: 2rem;
                 position: absolute;
                 top: 0;
                 right: 0;
                 bottom: 0;
                 left: 0;
-                background: lighten($primary-color, 35);
+                background: linear-gradient(to bottom right, lighten($secondary-color, 5), lighten($primary-color, 5));
                 box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.20),3px 3px 6px rgba(0, 0, 0, 0.10);;
                 opacity: 0;
                 z-index: -1;
                 transition: opacity 250ms;
             }
-       }
-       & .choices{
-           display: flex;
-           flex-direction: column;
-           align-items: center;
-       }
-    }
-    & .checkout{
-        margin-top: 2rem;
-        margin-bottom: 2rem;
-        cursor: pointer;
-        position: relative;
-        z-index: 1;
-        border-radius: 2rem;
-        border: none;
-        height: 3rem;
-        width: 15rem;
-        color: white;
-        font-size: 1rem;
-        box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.15),3px 3px 6px rgba(0, 0, 0, 0.05);;
-        background: linear-gradient(to bottom right, $secondary-color 5%, $primary-color );
-        &:focus{
-            outline: none;
-        }
-        &:hover{
-            &::after{
-                opacity: 1;
-            }
-        }
-        &::after{
-            content: '';
-            border-radius: 2rem;
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            background: linear-gradient(to bottom right, lighten($secondary-color, 5), lighten($primary-color, 5));
-            box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.20),3px 3px 6px rgba(0, 0, 0, 0.10);;
-            opacity: 0;
-            z-index: -1;
-            transition: opacity 250ms;
         }
     }
 }

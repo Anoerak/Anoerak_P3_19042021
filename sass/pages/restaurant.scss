@@ -1,0 +1,240 @@
+#restaurant{
+    & header{
+        position: relative;
+        overflow: hidden;
+        & .hlogo2{
+            height: 4rem;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            & a{
+                text-decoration: none;
+                color: black;
+                margin-left: 2rem;
+                & i{
+                    font-size: 1.3rem;
+                }
+            }
+        }
+    }
+    & .topimg{
+        padding: 0;
+        & img{
+            object-fit: cover;
+            height: 20rem;
+            width: 100%;
+            padding: 0;
+        }
+    }
+}
+#restaurant{
+    & section{
+        position: relative;
+        margin-top: -3rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        border-radius: 2rem 2rem 0 0;
+        background: $lightgrey;
+        padding-top: 2rem;
+        & .menus{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            & .subtitles{
+                margin-bottom: 2rem;
+                font-size: 1.2rem;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                & h2{
+                    font-weight: 200;
+                    margin-left: 1rem;
+                }
+                & input{
+                    cursor: pointer;
+                    position: absolute;
+                    outline: none;
+                    width: 1.9rem;
+                    height: 1.9rem;
+                    margin-top: 0.7rem;
+                    z-index: 4;
+                    opacity: 0;
+                    &:checked + .iconify{
+                        opacity: 1;
+                        animation: heart 0.75s forwards;
+                    }
+                }
+                & .like .iconify{
+                    background: -webkit-linear-gradient($primary-color, $secondary-color);
+                                -webkit-text-fill-color: transparent; 
+                                -webkit-background-clip: text;
+                    display: block;
+                    outline: none;
+                    padding: 1px;
+                    transform: scaleY(0);
+                    transform-origin: 50% 50%;
+                    transition: transform 2s;
+                    font-size: 1.45rem;
+                    position: absolute;
+                    margin-top: 0.85rem;
+                    opacity: 1;
+                    z-index: 2;
+                }
+                & .like .fa_custom{
+                    background: -webkit-linear-gradient($primary-color, $secondary-color);  -webkit-text-fill-color: transparent; -webkit-background-clip: text;
+                    display: block;
+                    outline: none;
+                    opacity: 1;
+                    position: relative;
+                    padding: 1px;
+                    margin-top: 0.85rem;
+                    margin-right: 1rem;
+                    font-size: 1.45rem;
+                    font-weight: normal;
+                    z-index: 2;
+                }
+            }
+            & .menu {
+                max-width: 100%;
+                overflow: hidden;
+                padding: 0 1rem;
+                & .carte {
+                    position: relative;
+                    padding-bottom: 0.5rem;
+                    font-weight: normal;
+                    font-family: 'Roboto', sans-serif;
+                        &::after {
+                        content: "";
+                        width: 3rem;
+                        height: 0.25rem;
+                        background-color: $third-color;
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        }
+                }
+                &  .menuDetail {
+                    background-color: white;
+                    margin-left: 2rem;
+                    padding: 1rem;
+                    display: flex;
+                    border-radius: 0.75rem;
+                    margin: 1rem 0;
+                    box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
+                    overflow: hidden;
+                    cursor: pointer;
+                    max-width: 95%;
+                    & .entete {
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    flex: 1;
+                    }
+                    & .plat {
+                    margin: 0;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    }
+                    & .description {
+                    margin: 0;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    }
+                    & .tarif {
+                    font-weight: bold;
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: flex-end;
+                    padding-left: 0.5rem;
+                    }
+                    & .choisir {
+                    background-color: $third-color;
+                    margin: -1rem -5rem -1rem 1rem;
+                    width: 4rem;
+                    display:flex;
+                    align-items:center;
+                    justify-content:center;
+                    transition-duration: 0.5s;
+                    }
+                    &:hover .choisir {
+                    margin-right: -1rem;
+                    }
+                    & .iconeSelection {
+                    height: 1.6rem;
+                    width: 1.6rem;
+                    background-color: white;
+                    display:flex;
+                    align-items:center;
+                    justify-content:center;
+                    border-radius: 100px;
+                    transform: rotate(-360deg);
+                    transition-duration: 0.5s;
+                    }
+                    &:hover .iconeSelection {
+                    transform: rotate(0);
+                    }
+                    & .iconSelectionImg {
+                    color: $third-color;
+                    }
+                }
+            }
+        }
+        & .checkout{
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            cursor: pointer;
+            position: relative;
+            z-index: 1;
+            border-radius: 2rem;
+            border: none;
+            height: 3rem;
+            width: 15rem;
+            color: white;
+            font-size: 1rem;
+            box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.15),3px 3px 6px rgba(0, 0, 0, 0.05);;
+            background: linear-gradient(to bottom right, $secondary-color 5%, $primary-color );
+            &:focus{
+                outline: none;
+            }
+            &:hover{
+                &::after{
+                    opacity: 1;
+                }
+            }
+            &::after{
+                content: '';
+                border-radius: 2rem;
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background: linear-gradient(to bottom right, lighten($secondary-color, 5), lighten($primary-color, 5));
+                box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.20),3px 3px 6px rgba(0, 0, 0, 0.10);;
+                opacity: 0;
+                z-index: -1;
+                transition: opacity 250ms;
+            }
+        }
+    }
+}
+@for $i from 0 to 10 {
+    #restaurant{
+        section{
+            .menu{
+                .delay-#{$i} {
+                    animation: itemGrows .95s both cubic-bezier(0.37,1.04,0.55,1.07);
+                    transform: scale(0);
+                    transform-origin: top;
+                    animation-delay:  #{$i/10}s;
+                }
+            }
+        }
+    }
+}

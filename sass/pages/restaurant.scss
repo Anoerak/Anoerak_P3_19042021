@@ -18,7 +18,7 @@
             }
         }
     }
-    & .topimg{
+    & .heroimg{
         padding: 0;
         & img{
             object-fit: cover;
@@ -102,7 +102,7 @@
                 max-width: 100%;
                 overflow: hidden;
                 padding: 0 1rem;
-                & .carte {
+                & .head {
                     position: relative;
                     padding-bottom: 0.5rem;
                     font-weight: normal;
@@ -117,7 +117,7 @@
                         bottom: 0;
                         }
                 }
-                &  .menuDetail {
+                & .menuDetail {
                     background-color: white;
                     margin-left: 2rem;
                     padding: 1rem;
@@ -128,63 +128,64 @@
                     overflow: hidden;
                     cursor: pointer;
                     max-width: 95%;
-                    & .entete {
-                    white-space: nowrap;
-                    text-overflow: ellipsis;
-                    overflow: hidden;
-                    flex: 1;
-                    }
-                    & .plat {
-                    margin: 0;
-                    white-space: nowrap;
-                    text-overflow: ellipsis;
-                    overflow: hidden;
-                    }
-                    & .description {
-                    margin: 0;
-                    white-space: nowrap;
-                    text-overflow: ellipsis;
-                    overflow: hidden;
-                    }
-                    & .tarif {
-                    font-weight: bold;
-                    display: flex;
-                    justify-content: flex-end;
-                    align-items: flex-end;
-                    padding-left: 0.5rem;
-                    }
-                    & .choisir {
-                    background-color: $third-color;
-                    margin: -1rem -5rem -1rem 1rem;
-                    width: 4rem;
-                    display:flex;
-                    align-items:center;
-                    justify-content:center;
-                    transition-duration: 0.5s;
-                    }
-                    &:hover .choisir {
-                    margin-right: -1rem;
-                    }
-                    & .iconeSelection {
-                    height: 1.6rem;
-                    width: 1.6rem;
-                    background-color: white;
-                    display:flex;
-                    align-items:center;
-                    justify-content:center;
-                    border-radius: 100px;
-                    transform: rotate(-360deg);
-                    transition-duration: 0.5s;
-                    }
-                    &:hover .iconeSelection {
-                    transform: rotate(0);
-                    }
-                    & .iconSelectionImg {
-                    color: $third-color;
+                        & .details {
+                            white-space: nowrap;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                            flex: 1;
+                        }
+                        & .side {
+                            margin: 0;
+                            white-space: nowrap;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                        }
+                        & .description {
+                            margin: 0;
+                            white-space: nowrap;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                        }
+                        & .price {
+                            font-weight: bold;
+                            display: flex;
+                            justify-content: flex-end;
+                            align-items: flex-end;
+                            padding-left: 0.5rem;
+                        }
+                        & .choice {
+                            background-color: $third-color;
+                            margin: -1rem -5rem -1rem 1rem;
+                            width: 4rem;
+                            display:flex;
+                            align-items:center;
+                            justify-content:center;
+                            transition-duration: 0.5s;
+                        }
+                        &:hover .choice {
+                            margin-right: -1rem;                            
+                        }
+                        & .iconeSelection {
+                            height: 1.6rem;
+                            width: 1.6rem;
+                            background-color: white;
+                            display:flex;
+                            align-items:center;
+                            justify-content:center;
+                            border-radius: 100px;
+                            transform: rotate(-360deg);
+                            transition-duration: 0.5s;
+                        }
+                        &:hover .iconeSelection {
+                            transform: rotate(0);
+                        }
+                        & .iconSelectionImg {
+                            color: $third-color;
+                        }
+                        
                     }
                 }
             }
-        }
         & .checkout{
             margin-top: 2rem;
             margin-bottom: 2rem;
@@ -220,20 +221,6 @@
                 opacity: 0;
                 z-index: -1;
                 transition: opacity 250ms;
-            }
-        }
-    }
-}
-@for $i from 0 to 10 {
-    #restaurant{
-        section{
-            .menu{
-                .delay-#{$i} {
-                    animation: itemGrows .95s both cubic-bezier(0.37,1.04,0.55,1.07);
-                    transform: scale(0);
-                    transform-origin: top;
-                    animation-delay:  #{$i/10}s;
-                }
             }
         }
     }

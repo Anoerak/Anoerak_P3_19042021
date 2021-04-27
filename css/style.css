@@ -81,6 +81,7 @@
 }
 
 body {
+  max-width: 1200px;
   width: 100%;
   margin: auto;
   font-family: "Roboto", sans-serif;
@@ -236,21 +237,6 @@ body h1, body h2 {
     width: 50%;
   }
 }
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  width: 100%;
-  margin: auto;
-  font-family: "Roboto", sans-serif;
-}
-body h1, body h2 {
-  font-family: "Shrikhand", sans-serif;
-}
-
 #index header {
   display: flex;
   flex-direction: column;
@@ -446,6 +432,7 @@ body h1, body h2 {
 }
 #index section .restaurant .cardlink {
   display: flex;
+  position: relative;
   flex-direction: column;
   align-items: center;
   width: 100%;
@@ -459,8 +446,8 @@ body h1, body h2 {
   position: absolute;
   padding: 5px 15px 5px 15px;
   border-radius: 3px;
-  margin-top: 1rem;
-  margin-left: 20rem;
+  top: 10px;
+  right: 10px;
 }
 #index section .restaurant .card {
   display: flex;

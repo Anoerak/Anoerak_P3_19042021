@@ -26,6 +26,15 @@
     opacity: 1;
     z-index: 10;
   }
+  25% {
+    opacity: 0.75;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.25;
+  }
   100% {
     opacity: 0;
     z-index: -5;
@@ -62,48 +71,12 @@
 }
 
 body {
-  max-width: 1200px;
   width: 100%;
   margin: auto;
   font-family: "Roboto", sans-serif;
 }
 body h1, body h2 {
   font-family: "Shrikhand", sans-serif;
-}
-body footer {
-  bottom: 0;
-  left: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  background-color: #363636;
-  width: 100%;
-  margin-bottom: 0;
-  padding-bottom: 2rem;
-  padding-top: 1rem;
-}
-body footer .footerlogo {
-  filter: invert(100%);
-  width: 8rem;
-  margin-left: 1.5rem;
-  margin-bottom: 1rem;
-  margin-top: 1rem;
-}
-body footer ul {
-  list-style: none;
-  line-height: 1.5rem;
-  margin-left: 1.5rem;
-}
-body footer li a {
-  font-family: "Roboto";
-  text-decoration: none;
-  color: white;
-  font-size: 0.9rem;
-}
-body footer li a i {
-  width: 15px;
-  margin-right: 8px;
 }
 
 .circle1 {
@@ -135,6 +108,26 @@ body footer li a i {
 #index footer {
   animation: itemAppear 4s;
 }
+#index .loadertitle {
+  color: #7E7E7E;
+  left: 0em;
+  position: absolute;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  height: 50%;
+  line-height: 1.5;
+  padding-left: 1.5rem;
+  animation: loader 100ms both;
+  animation-delay: 2.7s;
+  z-index: 10;
+}
+#index .loadertitle p {
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 1rem;
+}
 #index .loader {
   left: 0em;
   position: absolute;
@@ -145,9 +138,8 @@ body footer li a i {
   height: 100%;
   padding-right: 4rem;
   line-height: 4;
-  animation: loader 100ms;
-  animation-delay: 3s;
-  animation-fill-mode: both;
+  animation: loader 100ms both;
+  animation-delay: 2.8s;
   z-index: 10;
 }
 #index .loader div {
@@ -175,7 +167,7 @@ body footer li a i {
   animation: loader2 0.65s 5;
 }
 #index .loader div:nth-child(4) {
-  left: 70px;
+  left: 60px;
   animation: loader3 0.65s 5;
 }
 
@@ -230,7 +222,7 @@ body footer li a i {
     display: flex;
     flex-wrap: wrap;
   }
-  body#restaurant section .menu .paragraphe {
+  body#restaurant section .menu .container {
     width: 50%;
   }
 }
@@ -241,48 +233,12 @@ body footer li a i {
 }
 
 body {
-  max-width: 1200px;
   width: 100%;
   margin: auto;
   font-family: "Roboto", sans-serif;
 }
 body h1, body h2 {
   font-family: "Shrikhand", sans-serif;
-}
-body footer {
-  bottom: 0;
-  left: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  background-color: #363636;
-  width: 100%;
-  margin-bottom: 0;
-  padding-bottom: 2rem;
-  padding-top: 1rem;
-}
-body footer .footerlogo {
-  filter: invert(100%);
-  width: 8rem;
-  margin-left: 1.5rem;
-  margin-bottom: 1rem;
-  margin-top: 1rem;
-}
-body footer ul {
-  list-style: none;
-  line-height: 1.5rem;
-  margin-left: 1.5rem;
-}
-body footer li a {
-  font-family: "Roboto";
-  text-decoration: none;
-  color: white;
-  font-size: 0.9rem;
-}
-body footer li a i {
-  width: 15px;
-  margin-right: 8px;
 }
 
 #index header {
@@ -569,7 +525,8 @@ body footer li a i {
   transition: transform 2s;
   font-size: 1.45rem;
   position: absolute;
-  margin-top: 0.85rem;
+  margin-top: 14px;
+  margin-right: 1px;
   z-index: 2;
 }
 #index section .restaurant .card .board .like .fa_custom {
@@ -616,10 +573,10 @@ body footer li a i {
 #restaurant header .hlogo2 a i {
   font-size: 1.3rem;
 }
-#restaurant .topimg {
+#restaurant .heroimg {
   padding: 0;
 }
-#restaurant .topimg img {
+#restaurant .heroimg img {
   object-fit: cover;
   height: 20rem;
   width: 100%;
@@ -704,13 +661,13 @@ body footer li a i {
   overflow: hidden;
   padding: 0 1rem;
 }
-#restaurant section .menus .menu .carte {
+#restaurant section .menus .menu .head {
   position: relative;
   padding-bottom: 0.5rem;
   font-weight: normal;
   font-family: "Roboto", sans-serif;
 }
-#restaurant section .menus .menu .carte::after {
+#restaurant section .menus .menu .head::after {
   content: "";
   width: 3rem;
   height: 0.25rem;
@@ -731,13 +688,13 @@ body footer li a i {
   cursor: pointer;
   max-width: 95%;
 }
-#restaurant section .menus .menu .menuDetail .entete {
+#restaurant section .menus .menu .menuDetail .details {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
   flex: 1;
 }
-#restaurant section .menus .menu .menuDetail .plat {
+#restaurant section .menus .menu .menuDetail .side {
   margin: 0;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -749,14 +706,14 @@ body footer li a i {
   text-overflow: ellipsis;
   overflow: hidden;
 }
-#restaurant section .menus .menu .menuDetail .tarif {
+#restaurant section .menus .menu .menuDetail .price {
   font-weight: bold;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
   padding-left: 0.5rem;
 }
-#restaurant section .menus .menu .menuDetail .choisir {
+#restaurant section .menus .menu .menuDetail .choice {
   background-color: #99E2D0;
   margin: -1rem -5rem -1rem 1rem;
   width: 4rem;
@@ -765,7 +722,7 @@ body footer li a i {
   justify-content: center;
   transition-duration: 0.5s;
 }
-#restaurant section .menus .menu .menuDetail:hover .choisir {
+#restaurant section .menus .menu .menuDetail:hover .choice {
   margin-right: -1rem;
 }
 #restaurant section .menus .menu .menuDetail .iconeSelection {
@@ -889,6 +846,42 @@ body footer li a i {
   transform: scale(0);
   transform-origin: top;
   animation-delay: 0.9s;
+}
+
+body footer {
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  background-color: #363636;
+  width: 100%;
+  margin-bottom: 0;
+  padding-bottom: 2rem;
+  padding-top: 1rem;
+}
+body footer .footerlogo {
+  filter: invert(100%);
+  width: 8rem;
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+body footer ul {
+  list-style: none;
+  line-height: 1.5rem;
+  margin-left: 1.5rem;
+}
+body footer li a {
+  font-family: "Roboto";
+  text-decoration: none;
+  color: white;
+  font-size: 0.9rem;
+}
+body footer li a i {
+  width: 15px;
+  margin-right: 8px;
 }
 
 /*# sourceMappingURL=style.css.map */

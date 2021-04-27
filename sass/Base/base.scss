@@ -5,7 +5,7 @@ $footer-color:#363636;
 $darkgrey: #7E7E7E;
 $grey: #EAEAEA;
 $lightgrey: #F6F6F6;
-$yellow: #f58753;
+$orange: #f58753;
 
 *{
     margin: 0;
@@ -13,70 +13,10 @@ $yellow: #f58753;
     box-sizing: border-box;
 }
 body{
-    max-width: 1200px;
     width: 100%;
     margin: auto;
     font-family: 'Roboto', sans-serif;
     & h1, h2{
         font-family: 'Shrikhand', sans-serif;
     }
-    & footer{
-        bottom: 0;
-        left: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-        background-color: $footer-color;
-        width: 100%;
-        margin-bottom: 0;
-        padding-bottom: 2rem;
-        padding-top: 1rem;
-        & .footerlogo{
-            filter: invert(100%);
-            width: 8rem;
-            margin-left: 1.5rem;
-            margin-bottom: 1rem;
-            margin-top: 1rem;
-        }
-        & ul{
-        list-style: none;
-        line-height: 1.5rem;
-        margin-left: 1.5rem;
-        }
-        & li a{
-            font-family: 'Roboto';
-            text-decoration: none;
-            color: white;
-            font-size: 0.9rem;
-        }
-        & li a i{
-            width: 15px;
-            margin-right: 8px;
-        }
-    }
-}
-
-@mixin button($type) {
-    border: 0;
-    padding: 0.75rem 1.5rem;
-    font-weight: 500;
-    font-size: 1.1rem;
-    border-radius: 100px;
-    color: white;
-    background-color: rgb(104, 104, 104);
-    background-image: linear-gradient(to bottom right, lighten($secondary-color, 5), lighten($primary-color, 5));
-    cursor: pointer;
-    transition-duration: 0.25s;
-    box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
-
-  &:hover {
-    background-color: white;
-    box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.50);
-  }
-
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
 }

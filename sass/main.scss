@@ -1,6 +1,9 @@
-@import "./Components/keyframes.scss";
+@import "./Utils/keyframes.scss";
 @import "./Base/base.scss";
 @import "./Components/loader.scss";
 @import "./Layout/responsive.scss";
 @import "./pages/index.scss";
 @import "./pages/restaurant.scss";
+@import "./Utils/functions.scss";
+@import "./Utils/mixins.scss";
+@import "./Layout/footer.scss";

@@ -1,70 +1,89 @@
 .circle1{
-    color: #9356DC;
+    color: $primary-color;
     font-size: 1rem;
-  }
-  .circle2{
-    color: #FF79DA;
+}
+.circle2{
+    color: $secondary-color;
     font-size: 1rem;
-  }
-  .circle3{
-    color: #99E2D0;
+}
+.circle3{
+    color: $third-color;
     font-size: 1rem;
-  }
-  .circle4{
-    color: #f58753;
+}
+.circle4{
+    color: $orange;
     font-size: 1rem;
-  }
-  #index{
-        & header{
-            animation: itemAppear 3s;
+}
+#index{
+    & header{
+        animation: itemAppear 3s;
+    }
+    & section{
+        animation: itemAppear 3.5s;
+    }
+    & footer{
+        animation: itemAppear 4s;
+    }
+    & .loadertitle{
+        color: $darkgrey;
+        left: 0em;
+        position: absolute;
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end; 
+        width: 100%;
+        height: 50%;
+        line-height: 1.5;
+        padding-left: 1.5rem;
+        animation: loader 100ms both;
+        animation-delay: 2.7s;  
+        z-index: 10;
+        & p{
+            font-family: 'Roboto', sans-serif;
+            margin-bottom: 1rem;
         }
-        & section{
-            animation: itemAppear 3.5s;
-        }
-        & footer{
-            animation: itemAppear 4s;
-        }
-        & .loader {
-            left: 0em;
-            position: absolute;
+    }
+    & .loader {
+        left: 0em;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+        width: 100%;
+        height: 100%;
+        padding-right: 4rem;
+        line-height: 4;
+        animation: loader 100ms both;
+        animation-delay: 2.8s;  
+        z-index: 10;
+        & div {
+            position: relative;
             display: flex;
             align-items: center;
-            justify-content: center; 
-            width: 100%;
-            height: 100%;
-            padding-right: 4rem;
-            line-height: 4;
-            animation: loader 100ms;
-            animation-delay: 3s;  
-            animation-fill-mode: both;
-            z-index: 10;
-            & div {
-                position: relative;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                top: 33px;
-                width: 13px;
-                height: 13px;
-                border-radius: 50%;
-                background: #fff;
-                animation-timing-function: cubic-bezier(0, 1, 1, 0);
-            }
-            & div:nth-child(1) {
-                left: 10px;
-                animation: loader1 0.65s 5;
-            }
-            & div:nth-child(2) {
-                left: 10px;
-                animation: loader2 0.65s 5;
-            }
-            & div:nth-child(3) {
-                left: 40px;
-                animation: loader2 0.65s 5;
-            }
-            & div:nth-child(4) {
-                left: 70px;
-                animation: loader3 0.65s 5;
-            }
+            justify-content: center;
+            top: 33px;
+            width: 13px;
+            height: 13px;
+            border-radius: 50%;
+            background: #fff;
+            animation-timing-function: cubic-bezier(0, 1, 1, 0);
         }
+        & div:nth-child(1) {
+            left: 10px;
+            animation: loader1 0.65s 5;
+        }
+        & div:nth-child(2) {
+            left: 10px;
+            animation: loader2 0.65s 5;
+        }
+        & div:nth-child(3) {
+            left: 40px;
+            animation: loader2 0.65s 5;
+        }
+        & div:nth-child(4) {
+            left: 60px;
+            animation: loader3 0.65s 5;
+        }
+    }
 }

@@ -202,6 +202,16 @@
                 width: 100%;
                 text-decoration: none;
                 color: black;
+                & .tag{
+                    font-family: 'Roboto', sans-serif;
+                    background-color: $third-color;
+                    color: rgb(59, 133, 104);
+                    position: absolute;
+                    padding: 5px 15px 5px 15px;
+                    border-radius: 3px;
+                    margin-top: 1rem;
+                    margin-left: 20rem;
+                }    
             }
             & .card{
                 display: flex;
@@ -221,7 +231,8 @@
                     display: flex;
                     align-content: center;
                     object-fit: cover;
-                    height: 12rem;
+                    object-position: 50% 60%;
+                    height: 14rem;
                     width: 100%;
                     border-radius: 10px 10px 0 0;
                 }
@@ -268,9 +279,6 @@
                         &:checked + .iconify{
                             animation: heart 0.95s forwards;
                         }
-                        /*&:not(:checked) + .iconify{
-                            animation: heart 0.75s reverse;
-                        }*/
                     }
                     & .like .iconify{
                         background: -webkit-linear-gradient($primary-color, $secondary-color);
@@ -303,15 +311,5 @@
                 }
             }
         }
-    }
-}
-@keyframes heart{
-    0%{
-        transform: scaleY(0);
-        opacity: 0;
-    }
-    100%{
-        transform: scaleY(1);
-        opacity: 1;
     }
 }

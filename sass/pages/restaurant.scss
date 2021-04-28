@@ -166,16 +166,27 @@
                             z-index: 5;
                             opacity: 0;
                             cursor: pointer;
+                            &:checked ~ .choice {
+                                margin-right: -1rem;
+                                background-color: rgb(67, 168, 128);
+                                transition: none;
+                            }
                         }
-                        & .selection:checked ~ .choice {
-                            margin-right: -1rem;
-                            background-color: rgb(67, 168, 128);
-                            transition: none;
+                        & .selection:checked ~.choice .iconeSelection .iconSelectionImg{
+                            color: rgb(67, 168, 128);
                         }
-                        /*& .selection:checked ~ .choice:hover{
-                            background-color: brown;
-                            z-index: 4;
-                        }*/
+                        & .selection:checked:hover ~ .choice{
+                            background-color: #e2a199;
+                            & .iconeSelection{
+                                & .iconSelectionImg{
+                                    opacity: 0;
+                                }
+                                & .iconSelectionImg2 {
+                                    opacity: 1;
+                                    color: #e2a199;
+                                }
+                            }
+                        }
                         & .choice {
                             background-color: $third-color;
                             margin: -1rem -5rem -1rem 1rem;
@@ -197,13 +208,17 @@
                             justify-content:center;
                             border-radius: 100px;
                             transform: rotate(-360deg);
-                            transition-duration: 0.5s;
+                            transition-duration: 0.8s;
                         }
                         &:hover .iconeSelection {
                             transform: rotate(0);
                         }
                         & .iconSelectionImg {
                             color: $third-color;
+                        }
+                        & .iconSelectionImg2 {
+                            opacity: 0;
+                            position: absolute;
                         }
                         
                     }

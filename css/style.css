@@ -680,7 +680,7 @@ body h1, body h2 {
   margin: 1rem;
   box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  cursor: pointer;
+  cursor: default;
   max-width: 95%;
   /*& .selection:checked ~ .choice:hover{
       background-color: brown;
@@ -720,6 +720,7 @@ body h1, body h2 {
   top: 3px;
   z-index: 5;
   opacity: 0;
+  cursor: pointer;
 }
 #restaurant section .menus .menu .menuDetail .selection:checked ~ .choice {
   margin-right: -1rem;

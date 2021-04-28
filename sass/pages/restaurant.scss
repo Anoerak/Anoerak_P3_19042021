@@ -126,7 +126,7 @@
                     margin: 1rem;
                     box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
                     overflow: hidden;
-                    cursor: pointer;
+                    cursor: default;
                     max-width: 95%;
                         & .details {
                             white-space: nowrap;
@@ -161,6 +161,7 @@
                             top: 3px;
                             z-index: 5;
                             opacity: 0;
+                            cursor: pointer;
                         }
                         & .selection:checked ~ .choice {
                             margin-right: -1rem;

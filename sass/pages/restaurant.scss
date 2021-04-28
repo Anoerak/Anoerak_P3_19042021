@@ -124,10 +124,14 @@
                     display: flex;
                     border-radius: 0.75rem;
                     margin: 1rem;
-                    box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
+                    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.20),3px 3px 6px rgba(0, 0, 0, 0.10);
                     overflow: hidden;
                     cursor: default;
                     max-width: 95%;
+                    transition: 500ms;
+                        &:hover{
+                            box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.20),3px 3px 12px rgba(0, 0, 0, 0.10);
+                        }
                         & .details {
                             white-space: nowrap;
                             text-overflow: ellipsis;

@@ -223,9 +223,9 @@
                 margin-bottom: 1.5rem;
                 border-radius: 10px 10px 10px 10px;
                 box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.20),3px 3px 6px rgba(0, 0, 0, 0.10);
+                transition: 500ms;
                 &:hover{
                     box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.20),3px 3px 12px rgba(0, 0, 0, 0.10);
-                    transition: 500ms;
                 }
                 & img{
                     display: flex;

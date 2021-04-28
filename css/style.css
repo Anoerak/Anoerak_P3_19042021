@@ -459,10 +459,10 @@ body h1, body h2 {
   margin-bottom: 1.5rem;
   border-radius: 10px 10px 10px 10px;
   box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2), 3px 3px 6px rgba(0, 0, 0, 0.1);
+  transition: 500ms;
 }
 #index section .restaurant .card:hover {
   box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.2), 3px 3px 12px rgba(0, 0, 0, 0.1);
-  transition: 500ms;
 }
 #index section .restaurant .card img {
   display: flex;
@@ -678,14 +678,18 @@ body h1, body h2 {
   display: flex;
   border-radius: 0.75rem;
   margin: 1rem;
-  box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2), 3px 3px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   cursor: default;
   max-width: 95%;
+  transition: 500ms;
   /*& .selection:checked ~ .choice:hover{
       background-color: brown;
       z-index: 4;
   }*/
+}
+#restaurant section .menus .menu .menuDetail:hover {
+  box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.2), 3px 3px 12px rgba(0, 0, 0, 0.1);
 }
 #restaurant section .menus .menu .menuDetail .details {
   white-space: nowrap;

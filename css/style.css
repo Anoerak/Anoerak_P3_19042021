@@ -683,10 +683,6 @@ body h1, body h2 {
   cursor: default;
   max-width: 95%;
   transition: 500ms;
-  /*& .selection:checked ~ .choice:hover{
-      background-color: brown;
-      z-index: 4;
-  }*/
 }
 #restaurant section .menus .menu .menuDetail:hover {
   box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.2), 3px 3px 12px rgba(0, 0, 0, 0.1);
@@ -731,6 +727,19 @@ body h1, body h2 {
   background-color: #43a880;
   transition: none;
 }
+#restaurant section .menus .menu .menuDetail .selection:checked ~ .choice .iconeSelection .iconSelectionImg {
+  color: #43a880;
+}
+#restaurant section .menus .menu .menuDetail .selection:checked:hover ~ .choice {
+  background-color: #e2a199;
+}
+#restaurant section .menus .menu .menuDetail .selection:checked:hover ~ .choice .iconeSelection .iconSelectionImg {
+  opacity: 0;
+}
+#restaurant section .menus .menu .menuDetail .selection:checked:hover ~ .choice .iconeSelection .iconSelectionImg2 {
+  opacity: 1;
+  color: #e2a199;
+}
 #restaurant section .menus .menu .menuDetail .choice {
   background-color: #99E2D0;
   margin: -1rem -5rem -1rem 1rem;
@@ -752,13 +761,17 @@ body h1, body h2 {
   justify-content: center;
   border-radius: 100px;
   transform: rotate(-360deg);
-  transition-duration: 0.5s;
+  transition-duration: 0.8s;
 }
 #restaurant section .menus .menu .menuDetail:hover .iconeSelection {
   transform: rotate(0);
 }
 #restaurant section .menus .menu .menuDetail .iconSelectionImg {
   color: #99E2D0;
+}
+#restaurant section .menus .menu .menuDetail .iconSelectionImg2 {
+  opacity: 0;
+  position: absolute;
 }
 #restaurant section .checkout {
   margin-top: 2rem;

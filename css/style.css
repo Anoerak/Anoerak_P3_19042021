@@ -493,7 +493,7 @@ body h1, body h2 {
   text-decoration: none;
   color: black;
 }
-#index section .restaurant .card .board h4 {
+#index section .restaurant .card .board h3 {
   font-family: "Roboto";
   font-size: 1.2rem;
   margin-bottom: 5px;
